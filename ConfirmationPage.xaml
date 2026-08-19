@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="StudentProfileNavigator.ConfirmationPage" 
+    Title="Confirmation"> 
+
+    <ScrollView> 
+
+        <VerticalStackLayout 
+            Padding="30" 
+            Spacing="20"> 
+
+            <Label 
+                Text="CONFIRMATION" 
+                FontSize="28" 
+                FontAttributes="Bold" 
+                HorizontalOptions="Center" /> 
+
+            <Label 
+                Text="Please verify your details before submitting." 
+                FontSize="16" 
+                HorizontalOptions="Center" /> 
+
+            <Frame 
+                Padding="20" 
+                BorderColor="Gray"> 
+
+                <VerticalStackLayout Spacing="12"> 
+
+                    <Label 
+                        Text="Name" 
+                        FontAttributes="Bold" /> 
+                    <Label 
+                        x:Name="lblName" 
+                        FontSize="18" /> 
+
+                    <Label 
+                        Text="Student Number" 
+                        FontAttributes="Bold" /> 
+                    <Label 
+                        x:Name="lblStudentNumber" 
+                        FontSize="18" /> 
+
+                    <Label 
+                        Text="Email Address" 
+                        FontAttributes="Bold" /> 
+                    <Label 
+                        x:Name="lblEmail" 
+                        FontSize="18" /> 
+
+                    <Label 
+                        Text="Age" 
+                        FontAttributes="Bold" /> 
+                    <Label 
+                        x:Name="lblAge" 
+                        FontSize="18" /> 
+
+                    <Label 
+                        Text="Gender" 
+                        FontAttributes="Bold" /> 
+                    <Label 
+                        x:Name="lblGender" 
+                        FontSize="18" /> 
+
+                    <Label 
+                        Text="Program" 
+                        FontAttributes="Bold" /> 
+                    <Label 
+                        x:Name="lblProgram" 
+                        FontSize="18" /> 
+
+                </VerticalStackLayout> 
+
+            </Frame> 
+
+            <Button 
+                Text="CONFIRM &amp; VIEW PROFILE" 
+                Clicked="OnConfirmClicked" /> 
+
+            <Button 
+                Text="EDIT INFORMATION" 
+                Clicked="OnEditClicked" /> 
+
+        </VerticalStackLayout> 
+
+    </ScrollView> 
+
+</ContentPage>

@@ -1,4 +1,4 @@
-<api type="debug" assembly-name="StudentProfileNavigator" mvid="39534d46f03b41a6aa331e82f4a0e090">
+<api type="debug" assembly-name="StudentProfileNavigator" mvid="3be81c9072ae414bbbec41612c8f32c8">
   <java-to-managed>
     <entry java-name="crc644087e06d3a14b3ae/MainActivity" managed-name="StudentProfileNavigator.MainActivity, StudentProfileNavigator" managed-type-token-id="33554442" />
     <entry java-name="crc644087e06d3a14b3ae/MainApplication" managed-name="StudentProfileNavigator.MainApplication, StudentProfileNavigator" managed-type-token-id="33554443" />

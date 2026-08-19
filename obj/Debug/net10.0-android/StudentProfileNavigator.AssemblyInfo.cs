@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StudentProfileNavigator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+5d910e58e657f6de47d67656948876bd40614c2d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+8bd85b1ab1dc533b0685dbc2d5dc71ae163198f2")]
 [assembly: System.Reflection.AssemblyProductAttribute("StudentProfileNavigator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StudentProfileNavigator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

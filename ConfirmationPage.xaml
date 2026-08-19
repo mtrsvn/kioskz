@@ -3,87 +3,174 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="StudentProfileNavigator.ConfirmationPage" 
-    Title="Confirmation"> 
+    Title="Verify Profile"
+    NavigationPage.BarBackgroundColor="#0B0F19"
+    NavigationPage.BarTextColor="#FFFFFF"
+    BackgroundColor="#0B0F19">
 
-    <ScrollView> 
-
+    <ScrollView>
         <VerticalStackLayout 
-            Padding="30" 
-            Spacing="20"> 
+            Padding="24,30" 
+            Spacing="20"
+            MaximumWidthRequest="500"
+            HorizontalOptions="Center">
 
-            <Label 
-                Text="CONFIRMATION" 
-                FontSize="28" 
-                FontAttributes="Bold" 
-                HorizontalOptions="Center" /> 
-
-            <Label 
-                Text="Please verify your details before submitting." 
-                FontSize="16" 
-                HorizontalOptions="Center" /> 
-
-            <Frame 
-                Padding="20" 
-                BorderColor="Gray"> 
-
-                <VerticalStackLayout Spacing="12"> 
-
+            <VerticalStackLayout Spacing="6" HorizontalOptions="Center">
+                <Border 
+                    BackgroundColor="#14532D" 
+                    Stroke="#16A34A" 
+                    StrokeShape="RoundRectangle 12" 
+                    Padding="12,4" 
+                    HorizontalOptions="Center">
                     <Label 
-                        Text="Name" 
-                        FontAttributes="Bold" /> 
-                    <Label 
-                        x:Name="lblName" 
-                        FontSize="18" /> 
+                        Text="✦ VERIFICATION STEP" 
+                        FontSize="11" 
+                        FontAttributes="Bold" 
+                        TextColor="#86EFAC" 
+                        CharacterSpacing="1" />
+                </Border>
 
-                    <Label 
-                        Text="Student Number" 
-                        FontAttributes="Bold" /> 
-                    <Label 
-                        x:Name="lblStudentNumber" 
-                        FontSize="18" /> 
+                <Label 
+                    Text="CONFIRM DETAILS" 
+                    FontSize="28" 
+                    FontAttributes="Bold" 
+                    TextColor="#FFFFFF" 
+                    HorizontalOptions="Center" />
 
-                    <Label 
-                        Text="Email Address" 
-                        FontAttributes="Bold" /> 
-                    <Label 
-                        x:Name="lblEmail" 
-                        FontSize="18" /> 
+                <Label 
+                    Text="Please review your credentials before proceeding." 
+                    FontSize="14" 
+                    TextColor="#94A3B8" 
+                    HorizontalOptions="Center" />
+            </VerticalStackLayout>
 
-                    <Label 
-                        Text="Age" 
-                        FontAttributes="Bold" /> 
-                    <Label 
-                        x:Name="lblAge" 
-                        FontSize="18" /> 
+            <Border 
+                Stroke="#1E293B" 
+                StrokeShape="RoundRectangle 20" 
+                BackgroundColor="#111827" 
+                Padding="22">
+                <Border.Shadow>
+                    <Shadow Brush="#000000" Offset="0,8" Radius="20" Opacity="0.4" />
+                </Border.Shadow>
 
-                    <Label 
-                        Text="Gender" 
-                        FontAttributes="Bold" /> 
-                    <Label 
-                        x:Name="lblGender" 
-                        FontSize="18" /> 
+                <VerticalStackLayout Spacing="14">
 
-                    <Label 
-                        Text="Program" 
-                        FontAttributes="Bold" /> 
-                    <Label 
-                        x:Name="lblProgram" 
-                        FontSize="18" /> 
+                    <VerticalStackLayout Spacing="4">
+                        <Label 
+                            Text="FULL NAME" 
+                            FontSize="11" 
+                            FontAttributes="Bold" 
+                            TextColor="#64748B" />
+                        <Label 
+                            x:Name="lblName" 
+                            FontSize="17" 
+                            FontAttributes="Bold" 
+                            TextColor="#F8FAFC" />
+                    </VerticalStackLayout>
 
-                </VerticalStackLayout> 
+                    <BoxView HeightRequest="1" Color="#1E293B" />
 
-            </Frame> 
+                    <VerticalStackLayout Spacing="4">
+                        <Label 
+                            Text="STUDENT NUMBER" 
+                            FontSize="11" 
+                            FontAttributes="Bold" 
+                            TextColor="#64748B" />
+                        <Label 
+                            x:Name="lblStudentNumber" 
+                            FontSize="17" 
+                            FontAttributes="Bold" 
+                            TextColor="#38BDF8" />
+                    </VerticalStackLayout>
 
-            <Button 
-                Text="CONFIRM &amp; VIEW PROFILE" 
-                Clicked="OnConfirmClicked" /> 
+                    <BoxView HeightRequest="1" Color="#1E293B" />
 
-            <Button 
-                Text="EDIT INFORMATION" 
-                Clicked="OnEditClicked" /> 
+                    <VerticalStackLayout Spacing="4">
+                        <Label 
+                            Text="EMAIL ADDRESS" 
+                            FontSize="11" 
+                            FontAttributes="Bold" 
+                            TextColor="#64748B" />
+                        <Label 
+                            x:Name="lblEmail" 
+                            FontSize="17" 
+                            TextColor="#C084FC" />
+                    </VerticalStackLayout>
 
-        </VerticalStackLayout> 
+                    <BoxView HeightRequest="1" Color="#1E293B" />
 
-    </ScrollView> 
+                    <Grid ColumnDefinitions="*,*">
+                        <VerticalStackLayout Spacing="4">
+                            <Label 
+                                Text="AGE" 
+                                FontSize="11" 
+                                FontAttributes="Bold" 
+                                TextColor="#64748B" />
+                            <Label 
+                                x:Name="lblAge" 
+                                FontSize="17" 
+                                TextColor="#F8FAFC" />
+                        </VerticalStackLayout>
 
+                        <VerticalStackLayout Grid.Column="1" Spacing="4">
+                            <Label 
+                                Text="GENDER" 
+                                FontSize="11" 
+                                FontAttributes="Bold" 
+                                TextColor="#64748B" />
+                            <Label 
+                                x:Name="lblGender" 
+                                FontSize="17" 
+                                TextColor="#F8FAFC" />
+                        </VerticalStackLayout>
+                    </Grid>
+
+                    <BoxView HeightRequest="1" Color="#1E293B" />
+
+                    <VerticalStackLayout Spacing="4">
+                        <Label 
+                            Text="ACADEMIC PROGRAM" 
+                            FontSize="11" 
+                            FontAttributes="Bold" 
+                            TextColor="#64748B" />
+                        <Label 
+                            x:Name="lblProgram" 
+                            FontSize="17" 
+                            FontAttributes="Bold" 
+                            TextColor="#34D399" />
+                    </VerticalStackLayout>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <VerticalStackLayout Spacing="12">
+                <Button 
+                    Text="CONFIRM &amp; VIEW PROFILE  ➔" 
+                    Clicked="OnConfirmClicked"
+                    BackgroundColor="#10B981"
+                    TextColor="#FFFFFF"
+                    FontAttributes="Bold"
+                    FontSize="15"
+                    CornerRadius="14"
+                    HeightRequest="52">
+                    <Button.Shadow>
+                        <Shadow Brush="#10B981" Offset="0,4" Radius="15" Opacity="0.4" />
+                    </Button.Shadow>
+                </Button>
+
+                <Button 
+                    Text="←  EDIT INFORMATION" 
+                    Clicked="OnEditClicked"
+                    BackgroundColor="#1E293B"
+                    BorderColor="#334155"
+                    BorderWidth="1"
+                    TextColor="#E2E8F0"
+                    FontAttributes="Bold"
+                    FontSize="14"
+                    CornerRadius="14"
+                    HeightRequest="48" />
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

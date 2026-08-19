@@ -1,83 +1,230 @@
 <?xml version="1.0" encoding="utf-8" ?>
-
 <ContentPage 
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="StudentProfileNavigator.MainPage" 
-    Title="Student Information"> 
+    Title="Student Portal"
+    NavigationPage.BarBackgroundColor="#0B0F19"
+    NavigationPage.BarTextColor="#FFFFFF"
+    BackgroundColor="#0B0F19">
 
-    <ScrollView> 
-
+    <ScrollView>
         <VerticalStackLayout 
-            Padding="30" 
-            Spacing="15"> 
+            Padding="24,30" 
+            Spacing="20"
+            MaximumWidthRequest="500"
+            HorizontalOptions="Center">
 
-            <Label 
-                Text="STUDENT PROFILE" 
-                FontSize="28" 
-                FontAttributes="Bold" 
-                HorizontalOptions="Center" /> 
+            <VerticalStackLayout Spacing="6" HorizontalOptions="Center">
+                <Border 
+                    BackgroundColor="#1E1B4B" 
+                    Stroke="#4338CA" 
+                    StrokeShape="RoundRectangle 12" 
+                    Padding="12,4" 
+                    HorizontalOptions="Center">
+                    <Label 
+                        Text="✦ DEV CAMPUS // SYSTEM" 
+                        FontSize="11" 
+                        FontAttributes="Bold" 
+                        TextColor="#A5B4FC" 
+                        CharacterSpacing="1" />
+                </Border>
 
-            <Label 
-                Text="Enter your information below." 
-                FontSize="16" 
-                HorizontalOptions="Center" /> 
+                <Label 
+                    Text="STUDENT PROFILE" 
+                    FontSize="28" 
+                    FontAttributes="Bold" 
+                    TextColor="#FFFFFF" 
+                    HorizontalOptions="Center" />
 
-            <Entry 
-                x:Name="txtName" 
-                Placeholder="Enter student name" 
-                TextChanged="OnNameTextChanged" /> 
+                <Label 
+                    Text="Enter your credentials below to proceed." 
+                    FontSize="14" 
+                    TextColor="#94A3B8" 
+                    HorizontalOptions="Center" />
+            </VerticalStackLayout>
 
-            <Label 
-                x:Name="lblCharacterCount" 
-                Text="Characters: 0" /> 
+            <Border 
+                Stroke="#1E293B" 
+                StrokeShape="RoundRectangle 20" 
+                BackgroundColor="#111827" 
+                Padding="22">
+                <Border.Shadow>
+                    <Shadow Brush="#000000" Offset="0,8" Radius="20" Opacity="0.4" />
+                </Border.Shadow>
 
-            <Entry 
-                x:Name="txtStudentNumber" 
-                Placeholder="Enter student number" /> 
+                <VerticalStackLayout Spacing="16">
 
-            <Entry 
-                x:Name="txtEmail" 
-                Placeholder="Enter email address" 
-                Keyboard="Email" /> 
+                    <VerticalStackLayout Spacing="6">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Label 
+                                Text="STUDENT FULL NAME" 
+                                FontSize="12" 
+                                FontAttributes="Bold" 
+                                TextColor="#94A3B8" />
+                            <Label 
+                                x:Name="lblCharacterCount" 
+                                Grid.Column="1"
+                                Text="Characters: 0" 
+                                FontSize="12" 
+                                FontAttributes="Bold" 
+                                TextColor="#38BDF8" />
+                        </Grid>
+                        <Border 
+                            Stroke="#334155" 
+                            StrokeShape="RoundRectangle 12" 
+                            BackgroundColor="#0B0F19" 
+                            Padding="12,2">
+                            <Entry 
+                                x:Name="txtName" 
+                                Placeholder="e.g. Juan Dela Cruz" 
+                                PlaceholderColor="#475569"
+                                TextColor="#F8FAFC"
+                                TextChanged="OnNameTextChanged" />
+                        </Border>
+                    </VerticalStackLayout>
 
-            <Entry 
-                x:Name="txtAge" 
-                Placeholder="Enter age" 
-                Keyboard="Numeric" /> 
+                    <VerticalStackLayout Spacing="6">
+                        <Label 
+                            Text="STUDENT NUMBER" 
+                            FontSize="12" 
+                            FontAttributes="Bold" 
+                            TextColor="#94A3B8" />
+                        <Border 
+                            Stroke="#334155" 
+                            StrokeShape="RoundRectangle 12" 
+                            BackgroundColor="#0B0F19" 
+                            Padding="12,2">
+                            <Entry 
+                                x:Name="txtStudentNumber" 
+                                Placeholder="e.g. 2026-00001" 
+                                PlaceholderColor="#475569"
+                                TextColor="#F8FAFC" />
+                        </Border>
+                    </VerticalStackLayout>
 
-            <Picker 
-                x:Name="pickerGender" 
-                Title="Select Gender"> 
-                <Picker.Items> 
-                    <x:String>Male</x:String> 
-                    <x:String>Female</x:String> 
-                    <x:String>Prefer not to say</x:String> 
-                </Picker.Items> 
-            </Picker> 
+                    <VerticalStackLayout Spacing="6">
+                        <Label 
+                            Text="EMAIL ADDRESS" 
+                            FontSize="12" 
+                            FontAttributes="Bold" 
+                            TextColor="#94A3B8" />
+                        <Border 
+                            Stroke="#334155" 
+                            StrokeShape="RoundRectangle 12" 
+                            BackgroundColor="#0B0F19" 
+                            Padding="12,2">
+                            <Entry 
+                                x:Name="txtEmail" 
+                                Placeholder="e.g. student@example.com" 
+                                PlaceholderColor="#475569"
+                                TextColor="#F8FAFC"
+                                Keyboard="Email" />
+                        </Border>
+                    </VerticalStackLayout>
 
-            <Picker 
-                x:Name="pickerProgram" 
-                Title="Select Program"> 
-                <Picker.Items> 
-                    <x:String>BS Information Technology</x:String> 
-                    <x:String>BS Computer Science</x:String> 
-                    <x:String>BS Computer Engineering</x:String> 
-                    <x:String>BS Information Systems</x:String> 
-                </Picker.Items> 
-            </Picker> 
+                    <VerticalStackLayout Spacing="6">
+                        <Label 
+                            Text="AGE" 
+                            FontSize="12" 
+                            FontAttributes="Bold" 
+                            TextColor="#94A3B8" />
+                        <Border 
+                            Stroke="#334155" 
+                            StrokeShape="RoundRectangle 12" 
+                            BackgroundColor="#0B0F19" 
+                            Padding="12,2">
+                            <Entry 
+                                x:Name="txtAge" 
+                                Placeholder="e.g. 20" 
+                                PlaceholderColor="#475569"
+                                TextColor="#F8FAFC"
+                                Keyboard="Numeric" />
+                        </Border>
+                    </VerticalStackLayout>
 
-            <Button 
-                Text="CONTINUE" 
-                Clicked="OnContinueClicked" /> 
+                    <VerticalStackLayout Spacing="6">
+                        <Label 
+                            Text="GENDER" 
+                            FontSize="12" 
+                            FontAttributes="Bold" 
+                            TextColor="#94A3B8" />
+                        <Border 
+                            Stroke="#334155" 
+                            StrokeShape="RoundRectangle 12" 
+                            BackgroundColor="#0B0F19" 
+                            Padding="12,2">
+                            <Picker 
+                                x:Name="pickerGender" 
+                                Title="Select Gender"
+                                TitleColor="#475569"
+                                TextColor="#F8FAFC">
+                                <Picker.Items> 
+                                    <x:String>Male</x:String> 
+                                    <x:String>Female</x:String> 
+                                    <x:String>Prefer not to say</x:String> 
+                                </Picker.Items> 
+                            </Picker>
+                        </Border>
+                    </VerticalStackLayout>
 
-            <Button 
-                Text="RESET" 
-                Clicked="OnResetClicked" /> 
+                    <VerticalStackLayout Spacing="6">
+                        <Label 
+                            Text="ACADEMIC PROGRAM" 
+                            FontSize="12" 
+                            FontAttributes="Bold" 
+                            TextColor="#94A3B8" />
+                        <Border 
+                            Stroke="#334155" 
+                            StrokeShape="RoundRectangle 12" 
+                            BackgroundColor="#0B0F19" 
+                            Padding="12,2">
+                            <Picker 
+                                x:Name="pickerProgram" 
+                                Title="Select Academic Program"
+                                TitleColor="#475569"
+                                TextColor="#F8FAFC">
+                                <Picker.Items> 
+                                    <x:String>BS Information Technology</x:String> 
+                                    <x:String>BS Computer Science</x:String> 
+                                    <x:String>BS Computer Engineering</x:String> 
+                                    <x:String>BS Information Systems</x:String> 
+                                </Picker.Items> 
+                            </Picker>
+                        </Border>
+                    </VerticalStackLayout>
 
-        </VerticalStackLayout> 
+                </VerticalStackLayout>
+            </Border>
 
-    </ScrollView> 
+            <VerticalStackLayout Spacing="12">
+                <Button 
+                    Text="CONTINUE  ➔" 
+                    Clicked="OnContinueClicked"
+                    BackgroundColor="#6366F1"
+                    TextColor="#FFFFFF"
+                    FontAttributes="Bold"
+                    FontSize="15"
+                    CornerRadius="14"
+                    HeightRequest="52">
+                    <Button.Shadow>
+                        <Shadow Brush="#6366F1" Offset="0,4" Radius="15" Opacity="0.5" />
+                    </Button.Shadow>
+                </Button>
 
+                <Button 
+                    Text="RESET FIELDS" 
+                    Clicked="OnResetClicked"
+                    BackgroundColor="#1E293B"
+                    BorderColor="#334155"
+                    BorderWidth="1"
+                    TextColor="#F43F5E"
+                    FontAttributes="Bold"
+                    FontSize="14"
+                    CornerRadius="14"
+                    HeightRequest="48" />
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
-
